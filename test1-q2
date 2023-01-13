@@ -1,0 +1,28 @@
+(q2)*********************************replace cpp with programmimg**********************************
+
+
+#include <bits/stdc++.h> 
+using namespace std;
+class Programming
+{
+    public:
+    Programming()
+    {
+        cout<<"i love programming languages\n";
+    }
+    
+    Programming(string s)
+    {
+        cout<<"I love cpp "<<s;
+    }
+};
+
+int main() 
+{ 
+    string s;
+    cout<<"Enter a string ";
+    cin>>s;
+    Programming P;
+    Programming p1(s);
+
+}
