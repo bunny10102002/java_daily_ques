@@ -1,0 +1,58 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    int operation = sc.nextInt();
+
+    switch (operation) {
+      case 1:
+        if (num % 2 == 0) {
+          System.out.println("YES");
+        } else {
+          System.out.println("NO");
+        }
+        break;
+      case 2:
+        if (num % 2 != 0) {
+          System.out.println("YES");
+        } else {
+          System.out.println("NO");
+        }
+        break;
+      case 3:
+        if (isPrime(num)) {
+          System.out.println("YES");
+        } else {
+          System.out.println("NO");
+        }
+        break;
+      case 4:
+        System.out.println(factorial(num));
+        break;
+    }
+    sc.close();
+  }
+
+  static boolean isPrime(int n) {
+    if (n <= 1) {
+      return false;
+    }
+    for (int i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  static BigInteger factorial(int n) {
+    BigInteger fact = BigInteger.valueOf(1);
+    for (int i = 2; i <= n; i++) {
+      fact = fact.multiply(BigInteger.valueOf(i));
+    }
+    return fact;
+  }
+}
