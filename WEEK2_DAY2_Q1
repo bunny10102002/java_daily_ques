@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int b=input.nextInt();
+        if(b<0)
+        {
+            System.out.println("Invalid Input");
+        }
+        else
+        {
+            double u=(double) b;
+            System.out.println(u);
+        }
+        
+    }
+}
