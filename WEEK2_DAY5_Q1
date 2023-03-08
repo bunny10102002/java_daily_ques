@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args)
+ {
+Scanner obj=new Scanner(System.in);
+float x=obj.nextFloat();
+int y=obj.nextInt();
+int z=obj.nextInt();
+System.out.print((int)Math.ceil(x));
+System.out.print(" ");
+System.out.print((int)y);
+System.out.print(" ");
+System.out.print((int)z);
+}
+}
