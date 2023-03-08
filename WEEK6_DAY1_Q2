@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNextInt()) {
+            System.out.println("Invalid");
+            return;
+        }
+        int n = sc.nextInt();
+        if (n <= 0) {
+            System.out.println("Invalid");
+            return;
+        }
+        sc.nextLine();
+        String[] arr = sc.nextLine().split("\\s+");
+        int countInt = 0, countAlpha = 0;
+        for (String s : arr) {
+            if (s.matches("\\d+")) {
+                countInt++;
+            } else if (s.matches("[a-zA-Z]+")) {
+                countAlpha++;
+            }
+        }
+        System.out.println(countInt);
+        System.out.println(countAlpha);
+    }
+}
