@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+public static void main(String[] args) {
+        
+    Scanner obj=new Scanner(System.in);
+    float amount=obj.nextInt();
+          amount=(amount/10)+amount;
+    float b=amount/12;
+        
+        b=b*100;
+        int b1=(int)b;
+        b=(float)b1/100;
+        int amount1=(int)amount;
+        System.out.println(amount1);
+        System.out.println(b);
+    }
+}
