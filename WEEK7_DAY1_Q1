@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class TestEvaluation {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Read the correct answers
+        String correctAnswers = input.nextLine().toUpperCase();
+
+        // Read the number of students
+        int n = input.nextInt();
+        input.nextLine(); // Consume the newline character after the integer
+
+        // Evaluate the marks of all the students
+        double[] marks = new double[n];
+        for (int i = 0; i < n; i++) {
+            String studentAnswers = input.nextLine().toUpperCase();
+            marks[i] = evaluateMarks(correctAnswers, studentAnswers);
+        }
+
+        // Display the marks of all the students separated by space
+        for (double mark : marks) {
+            System.out.print(mark + " ");
+        }
+    }
+
+    // Method to evaluate the marks of a student's answers
+    public static double evaluateMarks(String correctAnswers, String studentAnswers) {
+        if (correctAnswers.length() != studentAnswers.length()) {
+            throw new IllegalArgumentException("Incorrect Input");
+        }
+
+        double marks = 0.0;
+        for (int i = 0; i < correctAnswers.length(); i++) {
+            if (studentAnswers.charAt(i) == 'X') {
+                continue; // Question not attempted
+            }
+
+            if (studentAnswers.charAt(i) == correctAnswers.charAt(i)) {
+                marks += 1.0; // Correct answer
+            } else {
+                marks -= 0.25; // Incorrect answer
+            }
+        }
+
+        return marks;
+    }
+}
