@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+  public static void main(String[] args) 
+  {
+    Scanner sc = new Scanner(System.in);
+    double input = sc.nextDouble();
+    int inputInt = (int) input;
+      
+    if (inputInt >= 1 && inputInt <= 5) 
+    {
+      System.out.println("Thanks");
+    } else 
+    {
+      System.out.println("Error: 101");
+    }
+  }
+}
