@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    int heldedclass = sc.nextInt();
+    int attendedclass = sc.nextInt();
+
+    int attendance = ( attendedclass* 100) / heldedclass;
+    
+    if (attendance >= 75) 
+    {
+         System.out.println(attendance + "\nYes");
+    } 
+    else 
+    {
+      System.out.println(attendance + "\nNo");
+    }
+    }
+}
