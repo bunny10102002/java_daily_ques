@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+class Integer1 {
+    int[] arr;
+
+    Integer1(int[] arr) {
+        this.arr = arr;
+    }
+
+    int sum() {
+        int sum = 0;
+        for (int i : arr) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    int multiplication() {
+        int product = 1;
+        for (int i : arr) {
+            product *= i;
+        }
+        return product;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input array size
+        int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Invalid Array Size");
+            return;
+        }
+
+        // Input array elements
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        Integer1 integer = new Integer1(arr);
+
+        // Input user choice
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                System.out.println(integer.sum());
+                break;
+            case 2:
+                System.out.println(integer.multiplication());
+                break;
+            default:
+                System.out.println("Wrong Choice");
+        }
+
+        sc.close();
+    }
+}
