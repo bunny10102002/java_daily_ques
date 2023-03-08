@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        double t = sc.nextDouble();
+        if(a==1)
+        {
+            double temp = ((t-32)*5)/9;
+            System.out.printf("%.2f",temp);
+        }
+        if(a==2)
+        {
+            double temp = (t*1.8)+32;
+            System.out.printf("%.1f",temp);
+        }  
+    }
+}
