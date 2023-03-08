@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+     Scanner input=new Scanner(System.in);
+        int b,flag=0;
+        b=input.nextInt();
+        int i;
+        float arr[]=new float[b];
+        for(i=0;i<b;i++)
+        {
+            arr[i]=input.nextFloat();
+            if(arr[i]<0)
+            {
+                flag=1;
+            }
+        }
+        
+            if(flag==1)
+            {
+                System.out.println("Invalid Array Elements");
+            }
+            else
+            {
+                for(i=0;i<b;i++)
+                {
+                    System.out.println((int)arr[i]);
+                }
+            }
+    }
+}
