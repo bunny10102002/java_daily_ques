@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        String str;
+        str=obj.nextLine();
+        char c=obj.next().charAt(0);
+        int count = 0;        
+        char str2[] = str.toCharArray();    
+
+for(int i = 0; i <str2.length; i++) {    
+                if(str2[i] == c && str2[i] != ' ') {    
+                    count++;                            
+                }    
+            }
+                System.out.println(count); 
+    }
+}
