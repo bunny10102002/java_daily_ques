@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+         String b=sc.nextLine();
+        int u=Integer.parseInt(b, 2);
+        if (u<65||u>90) {
+            System.out.println("INVALID PAPER CODE");
+     
+        } else {
+            System.out.println((char)u);
+              }
+    }
+}
